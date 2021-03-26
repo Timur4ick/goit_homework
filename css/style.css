@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic/raleway-v19-latin_cyrillic-ext_cyrillic-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic/raleway-v19-latin_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic/raleway-v19-latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic/raleway-v19-latin_cyrillic-ext_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic/raleway-v19-latin_cyrillic-ext_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic/raleway-v19-latin_cyrillic-ext_cyrillic-700.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  /* Заготовки глобальных настроек */
+  :root {
+    --main-text-color-gray: #757575;
+    --main-text-color-black: #212121;
+    --main-text-color-master-black: #000000;
+    --main-text-color-blue: #2196F3;
+    --main-text-color-white: #FFFFFF;
+    --bg-color-gray: #2f303a;
+    --border-color: #EEEEEE;
+    --bg-color-team: #F5F4FA;
+  }
+  /* font-family: 'Roboto', sans-serif; */
+  /* Цвет фона main */
+  .main-bg {
+    background-color: var(--main-text-color-white);
+  }
+  /* a.current {
+    color: var(--main-text-color-blue);
+  } */
+  /* Применение классов */
+  /* настройка цвета логотипа, а именно части Web */
+  .logocolor {
+    color: var(--main-text-color-blue);
+  }
+  /* Настройка тела сайта */
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em; /* расстояние между буквами*/
+    color: var(--main-text-color-black);
+    /*background-color: #e5e5e5;*/
+  }
+  .logo-link
+  {
+    text-decoration: none; /* убирает подчеркивание с ссылки */
+    color: inherit; /* обесцвечивает ссылку */
+  }
+  /* обесцвечивание и скрытия подч]ркивания для ссылки */
+  .link {
+    text-decoration: none; /* убирает подчеркивание с ссылки */
+    color: inherit; /*обесцвечивает ссылку*/
+  }
+  /* изменение ссылки при наведении */
+  .link:hover,
+  :focus {
+    color: var(--main-text-color-blue);
+  }
+  /* Список в ряд */
+  .three {
+  display: inline-flex;
+  }
+  /* Отцентровать */
+  .center {
+    text-align: center;
+  }
+  /* Убрать нумерацию списка */
+  .list {
+    list-style: none;
+  }
+  /* Выстраивание списка в ряд */
+  .line {
+          display: inline;
+          margin-right: 5px;
+          /* list-style: none;убираем маркеры списка */
+          /*display: inline-block; /* Отображать как строчный элемент */
+          /* margin: 0; убираем верхнее и нижнее поле, равное 1em */
+          /* padding-left: 0; убираем левый отступ, равный 40px */
+          /* margin-right: 5px; Отступ слева */
+          /* border: 1px solid #000; Рамка вокруг текста
+          padding: 3px; Поля вокруг текста */
+      }
+  .up-phone-email-style {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color-gray);
+  }
+  /* оформление верхнего меню */
+  .up-menue-style {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color-black);
+  }
+  /* Цвет футера */
+  .fppter-text-color {
+    color: var(--main-text-color-white);
+  }
+  /* оформление адреса нижнего меню */
+  .down-menue-address-style {
+  /*font-weight: 400;*/
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+    }
+  /* оформление нижнего меню телефона и имэйла*/
+  .down-menue-contact-style {
+  color: rgba(255, 255, 255, 0.6);
+      }
+  /* Стиль заголовка н1 */
+  .h1-style {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  /* text-align: center; */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-text-color-white);
+  }
+  /* Стиль заголовка н2 */
+  .h2-style {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    /* text-align: center; */
+    letter-spacing: 0.03em;
+    color: var(--main-text-color-master-black);
+  }
+  /* Стиль заголовка н2 для "Наша команда" */
+  .h2-style-team {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9;
+    /* text-align: center; */
+    letter-spacing: 0.03em;
+    color: var(--main-text-color-master-black);
+  }
+  /* Стиль заготовка н3 */
+  .h3-style {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-text-color-black);
+  }
+  .p-style-up {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color-gray);
+  }
+  /* Стиль для простого текста главной страницы */
+  .p-style {
+    /*font-weight: 400;*/
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;  
+    color: var(--main-text-color-gray);
+  }
+  /* Стиль для подписи нашей команды */
+  .p-style-team {
+    /*font-weight: 400;*/
+    font-size: 16px;
+    line-height: 1.19;
+    /* text-align: center; */
+    letter-spacing: 0.03em;  
+    color: var(--main-text-color-gray);
+  }
+  /* Стиль для cтилизации заголовка фото в портфолио */
+  .portfolio-h3-style {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color-black);
+  }
+  /* Стиль для cтилизации описания фото в портфолио */
+  .portfolio-p-style {
+  /*font-weight: 400;*/
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color-gray);
+  }
+  /* Стиль кнопки на главной странице */
+  .button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color-white);
+  }
+  .button-index {
+    background-color: var(--main-text-color-blue);
+  }
+  /* изменение цвета кнопки при наведении */
+  .button:hover,
+  :focus {
+    background-color: var(--main-text-color-blue); /*изменение цвета кнопни*/
+    color: var(--main-text-color-white); /*изменение цвета надписи*/
+    cursor: pointer;
+  }
+  /* Стиль логотипа (цвет, шрифт и т.д.) */
+  .logo-style {  
+  font-family: "Raleway", sans-serif;
+  /* font-style: normal; */
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  /* color: var(--main-text-color-master-black); */
+  }
+  /* Стиль кнопок на странице портфолио */
+  .portfolio-buttom {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color-black);
+  background-color: var(--main-text-color-white);
+  cursor: pointer;
+  }
+  
+  .portfolio-buttom:hover,
+  :focus {
+  
+  .portfolio-buttom.link:hover,
+  .portfolio-buttom.link:focus {
+    background-color: var(--main-text-color-blue); /*изменение цвета кнопни*/
+    color: var(--main-text-color-white);  /*изменение цвета надписи*/
+    cursor: pointer;
+    /* cursor: pointer; */
+  }
+  
+  .portfolio-buttom.primary {
+    background-color: var(--main-text-color-blue);
+    color: var(--main-text-color-white);
+    border-color: var(--main-text-color-blue);
+  }
+  
+  .portfolio-buttom.secondary {
+    background-color: var(--main-text-color-white);
+    color: var(--main-text-color-black);
+    border-color: var(--main-text-color-white);
+  }
+  
+  
+  
+  
+  /* Класс скрывающий элементы */
+  .visually-hidden {
+    position: absolute !important;
+  @@ -308,7 +325,7 @@ color: var(--main-text-color-black);
+  .bg-color-header {
+    /* position: absolute; */
+    width: 1600px;
+    height: 80px;
+    /* height: 80px; */
+    left: 0px;
+    top: 0px;
+  
+  @@ -318,7 +335,7 @@ color: var(--main-text-color-black);
+  .bg-color-up {
+  /* position: absolute; */
+  width: 1600px;
+  height: 600px;
+  /* height: 600px; */
+  left: 0px;
+  top: 80px;
+  background: var(--main-text-color-gray);
+  }
+  .bg-color-team {
+    /* position: absolute; */
+    width: 1600px;
+    height: 648px;
+    /* height: 648px; */
+    left: 0px;
+    top: 1449px;
+    background: var(--bg-color-team);
+  }
+  .bg-color-footer {
+    /* position: absolute; */
+    width: 1600px;
+    height: 252px;
+    /* height: 252px; */
+    left: 0px;
+    top: 1628px;
+    background: var(--bg-color-gray);
+  }
+  .bg-color-portfolio-block {
+    /* position: absolute; */
+  width: 370px;
+  height: 404px;
+  /* height: 404px; */
+  left: 1015px;
+  top: 262px;
+  background: var(--main-text-color-white);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  }
+  .block-style-index {
+    /* position: absolute; */
+    width: 270px;
+    height: 368px;
+    /* height: 368px; */
+    left: 215px;
+    top: 1635px;
+    background: var(--main-text-color-white);
+    /* material shadow v1 */  
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  /* raleway-regular - latin_cyrillic-ext_cyrillic */
+  /*@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.eot'); /* IE9 Compat Modes */
+   /* src: local(''),
+         url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    /*     url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+   /*      url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+   /*      url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+   /*      url('../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  /*}*/
+  /* raleway-700 - latin_cyrillic-ext_cyrillic */
